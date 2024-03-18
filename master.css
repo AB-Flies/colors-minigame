@@ -29,7 +29,8 @@ body {
   gap: min(10vh, 4vw);
   flex-direction: row;
   --win-hover: 140px;
-  --shadow: 90px
+  --shadow: 90px;
+  --pos: 60%
 }
 
 .mobile {
@@ -41,6 +42,7 @@ body {
   height: 50vh;
   --win-hover: 200px;
   --shadow: 200px;
+  --pos: 50%;
 }
 
 #last {
