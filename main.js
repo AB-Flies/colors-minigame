@@ -87,8 +87,7 @@ function swap(b = true) {
 
   marked.splice(0, 1)
 
-  if (b)
-    refreshCorrect();
+  refreshCorrect(b);
 }
 
 function refreshCorrect(b = true) {
@@ -98,14 +97,13 @@ function refreshCorrect(b = true) {
       counter++
   }
 
-  showChange(counter - parseInt(document.querySelector('#correctNumber').textContent), b)
+  if (b)
+    showChange(counter - parseInt(document.querySelector('#correctNumber').textContent))
   document.querySelector('#correctNumber').textContent = counter;
 }
 
 
-function showChange(n, b) {
-  if (!b)
-    return;
+function showChange(n) {
 
   let element
   let banner = document.getElementById('banner')
