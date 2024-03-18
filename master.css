@@ -42,7 +42,7 @@ body {
   height: 50vh;
   --win-hover: 200px;
   --shadow: 200px;
-  --pos: 50%;
+  --pos: 100%;
 }
 
 #last {
