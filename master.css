@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  --size: min(25vh, 15vw);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background: #27282c;
+  flex-direction: column;
+  gap: min(10vh, 4vw);
+  flex-direction: row;
+}
+
+a {
+  position: relative;
+  background: #444;
+  color: var(--clr);
+  text-shadow: 0px 0px 20px var(--clr);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.75em;
+  letter-spacing: 0.1em;
+  transition: 0.5s;
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+a:hover {
+  background: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+
+.noTouchable {
+  user-select: none;
+}
+
+.noTouchable:hover {
+  font-size: 1.5em;
+  background: #444;
+  box-shadow: 0 0 0;
+}
+
+.marked {
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 90px var(--clr);
+}
+
+.marked:hover {
+  box-shadow: 0 0 90px var(--clr);
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  background: #27282c;
+  transition: 0.5s;
+}
+
+a:hover::before {
+  background: var(--clr);
+}
+
+.noTouchable:hover::before {
+  background: #27282c;
+}
+
+a span {
+  position: relative;
+  text-align: center;
+  width: var(--size);
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    bottom: 0%;
+  }
+
+  40% {
+    opacity: 1;
+    bottom: 50%;
+  }
+
+  60% {
+    opacity: 1;
+    bottom: 50%;
+  }
+
+  100% {
+    opacity: 0;
+    bottom: 100%;
+  }
+}
+
+@keyframes win {
+  0% {
+    opacity: 0;
+    bottom: 0%;
+  }
+
+  49% {
+    opacity: 1;
+    bottom: 50%;
+  }
+
+  51% {
+    opacity: 1;
+    bottom: 50%;
+    font-size: 1.5em;
+    width: 70px;
+    height: 70px;
+    background: #444;
+    box-shadow: 0 0 0;
+  }
+
+  100% {
+    font-size: 4em;
+    opacity: 1;
+    bottom: 50%;
+    width: 140px;
+    height: 140px;
+    background: var(--clr);
+    box-shadow: 0 0 90px;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: white;
+  }
+
+  100% {
+    color: var(--clr);
+  }
+}
+
+.show {
+  animation-name: show;
+  animation-duration: 2s;
+  /* Repetir la animación infinitamente */
+}
+
+.win {
+  animation-name: win;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+.colorChange {
+  --fill: none;
+  --dir: alternate;
+  animation-fill-mode: var(--fill);
+  animation-name: colorChange;
+  animation-direction: var(--dir);
+  animation-duration: 1s;
+  animation-iteration-count: 2;
+}
+
+.container {
+  z-index: -1;
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  bottom: 0;
+}
+
+.bubbles {
+  position: absolute;
+  display: flex;
+  height: 100vh;
+  --secondary-clr: #444;
+  --speed: 350s;
+  transition: 0.5s;
+}
+
+.bubbles span {
+  top: -50px;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  filter: blur(15px) opacity(0.5);
+  background: var(--secondary-clr);
+  margin: 0 2px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px var(--secondary-clr);
+  animation-name: background_animation;
+  /* The higher value of --i, the higher will be the speed of the bubble */
+  animation-duration: calc(var(--speed) / var(--i));
+  /* Bubbles go faster when they are near the top of the screen.
+     It helps the screen feel balanced, since the bubbles are bigger when they are on top.
+     At the same time, the speed change is smooth and probably the user won't notice */
+  animation-timing-function: cubic-bezier(.3, 0, 1, .8);
+  animation-iteration-count: infinite;
+  /* I put the animation delay because either way all the bubbles start at the same time.
+     This way, faster bubbles start sooner so all the animation feels a bit more natural */
+  animation-delay: calc(30s / (var(--i) - 9) - 1s);
+}
+
+@keyframes background_animation {
+  from {
+    transform: translateY(110vh) scale(0.2);
+  }
+
+  to {
+    transform: translateY(-10vh) scale(1.2);
+  }
+}
+
+.bubblesShow {
+  --secondary-clr: #444;
+}

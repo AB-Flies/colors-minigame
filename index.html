@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS modern button</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="master.css">
+</head>
+
+<body>
+  <span id="banner" style="color: white; position: absolute; font-size: 2.5em; left: 30px; top: 30px;"> Correct: <span
+      id="correctNumber">0</span></span>
+
+  <a href="javascript:mark(0)" style="--clr:#fdcae1"> <span>Pink</span> </a>
+
+  <a href="javascript:mark(1)" style="--clr:#84b6f4"> <span>Blue</span> </a>
+
+  <a href="javascript:mark(2)" style="--clr:#fdfd96"> <span>Yellow</span> </a>
+
+  <a href="javascript:mark(3)" style="--clr:#ff6961"> <span>Red</span> </a>
+
+  <a href="javascript:mark(4)" style="--clr:#77dd77"> <span>Green</span> </a>
+
+  <div
+    style="z-index: -1; position:absolute; align-items: center; display:flex; justify-content: center; width:100vw; height:50vh; top: 0">
+    <a id="up" class="hidden noTouchable"
+      style="position: absolute; opacity: 0; --clr:#77dd77; width: 70px; height: 70px;">
+      <span>▲</span>
+    </a>
+
+    <a id="same" class="hidden noTouchable"
+      style="position: absolute; opacity: 0; --clr:grey; width: 70px; height: 70px;">
+      <span>-</span>
+    </a>
+
+    <a id="down" class="hidden noTouchable"
+      style="position: absolute; opacity: 0; --clr:#ff6961; width: 70px; height: 70px;">
+      <span>▼</span>
+    </a>
+
+    <a id="win" class="hidden noTouchable"
+      style="position: absolute; opacity: 0; --clr:#fdfd96; width: 70px; height: 70px;">
+      <span style="width: 100%;"><i class="fa-solid fa-trophy"></i></span>
+    </a>
+  </div>
+
+  <!-- BACKGROUND -->
+  <div class="container">
+    <div class="bubbles">
+      <span style="--i:38"></span>
+      <span style="--i:11"></span>
+      <span style="--i:31"></span>
+      <span style="--i:12"></span>
+      <span style="--i:24"></span>
+      <span style="--i:32"></span>
+      <span style="--i:10"></span>
+      <span style="--i:14"></span>
+      <span style="--i:36"></span>
+      <span style="--i:23"></span>
+      <span style="--i:18"></span>
+      <span style="--i:16"></span>
+      <span style="--i:19"></span>
+      <span style="--i:20"></span>
+      <span style="--i:22"></span>
+      <span style="--i:37"></span>
+      <span style="--i:25"></span>
+      <span style="--i:29"></span>
+      <span style="--i:35"></span>
+      <span style="--i:21"></span>
+      <span style="--i:15"></span>
+      <span style="--i:30"></span>
+      <span style="--i:27"></span>
+      <span style="--i:13"></span>
+      <span style="--i:26"></span>
+      <span style="--i:39"></span>
+      <span style="--i:33"></span>
+      <span style="--i:17"></span>
+      <span style="--i:28"></span>
+      <span style="--i:34"></span>
+      <span style="--i:38"></span>
+      <span style="--i:11"></span>
+      <span style="--i:31"></span>
+      <span style="--i:12"></span>
+      <span style="--i:24"></span>
+      <span style="--i:32"></span>
+      <span style="--i:10"></span>
+      <span style="--i:14"></span>
+      <span style="--i:36"></span>
+      <span style="--i:23"></span>
+      <span style="--i:18"></span>
+      <span style="--i:16"></span>
+      <span style="--i:19"></span>
+      <span style="--i:20"></span>
+      <span style="--i:22"></span>
+      <span style="--i:37"></span>
+      <span style="--i:25"></span>
+      <span style="--i:29"></span>
+      <span style="--i:35"></span>
+      <span style="--i:21"></span>
+    </div>
+  </div>
+</body>
+
+<script src="main.js"></script>
+
+</html>
