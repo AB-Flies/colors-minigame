@@ -28,15 +28,19 @@ body {
   overflow: visible;
   gap: min(10vh, 4vw);
   flex-direction: row;
+  --win-hover: 140px;
+  --banner-font-size: 2.5em;
 }
 
 .mobile {
+  --banner-font-size: 4em;
   --size: min(25vh, 25vw);
   font-size: 1.75em;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   height: 50vh;
+  --win-hover: 200px;
 }
 
 #last {
@@ -163,8 +167,8 @@ a span {
     font-size: 4em;
     opacity: 1;
     bottom: 50%;
-    width: 140px;
-    height: 140px;
+    width: var(--win-hover);
+    height: var(--win-hover);
     background: var(--clr);
     box-shadow: 0 0 90px;
   }
@@ -203,7 +207,7 @@ a span {
 }
 
 .bubblesContainer {
-  z-index: -1;
+  z-index: -2;
   display: flex;
   position: absolute;
   overflow: hidden;

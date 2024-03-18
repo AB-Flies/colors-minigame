@@ -11,9 +11,11 @@
 </head>
 
 <body>
-  <span id="banner" style="color: white; position: absolute; font-size: 2.5em; left: 30px; top: 30px;"> Correct: <span
-      id="correctNumber">0</span></span>
   <div class="container">
+    <span id="banner"
+      style="color: white; position: absolute; font-size: var(--banner-font-size); left: 30px; top: 30px;"> Correct:
+      <span id="correctNumber">0</span></span>
+
     <div class="grid_item"><a href="javascript:mark(0)" style="--clr:#fdcae1"> <span>Pink</span> </a></div>
 
     <div class="grid_item"><a href="javascript:mark(1)" style="--clr:#84b6f4"> <span>Blue</span> </a></div>
@@ -25,7 +27,7 @@
     <div class="grid_item" id="last"><a href="javascript:mark(4)" style="--clr:#77dd77"> <span>Green</span> </a></div>
 
     <div
-      style="z-index: -1; position:absolute; align-items: center; display:flex; justify-content: center; width:100vw; height:50vh; top: 0">
+      style="z-index: -1; position:absolute; align-items: center; display:flex; justify-content: center; width:100vw; height:60%; top: 0">
       <a id="up" class="hidden noTouchable"
         style="position: absolute; opacity: 0; --clr:#77dd77; width: 70px; height: 70px;">
         <span>▲</span>
