@@ -6,11 +6,15 @@ const ButtonType = {
   Green: '#77dd77'
 }
 
+if (esDispositivoMovil())
+  document.getElementsByClassName('container').classList.add('mobile')
+
 const buttons = document.getElementsByTagName('a')
 const marked = []
 const solution = []
 let action = true;
 let counter;
+
 
 (function randomizeSolution() {
   let aux = [
@@ -32,6 +36,10 @@ refreshCorrect(false);
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
+}
+
+function esDispositivoMovil() {
+  return window.innerWidth <= 768; // Puedes ajustar este valor según tus necesidades
 }
 
 function mark(i) {
