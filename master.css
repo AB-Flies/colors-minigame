@@ -43,41 +43,45 @@ body {
   --win-hover: 200px;
   --shadow: 200px;
   --pos: 100%;
+
+  #last {
+    grid-column: span 2;
+  }
+
+  .grid_item {
+    display: flex;
+    align-items: center;
+    /* Centrar verticalmente */
+    justify-content: center;
+    /* Centrar horizontalmente */
+  }
+
+  a {
+    position: relative;
+    background: #444;
+    color: var(--clr);
+    text-shadow: 0px 0px 20px var(--clr);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.55em;
+    letter-spacing: 0.1em;
+    transition: 0.5s;
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  a:hover {
+    background: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+  }
 }
 
-#last {
-  grid-column: span 2;
-}
-
-.grid_item {
-  display: flex;
-  align-items: center;
-  /* Centrar verticalmente */
-  justify-content: center;
-  /* Centrar horizontalmente */
-}
-
-a {
-  position: relative;
+.mobile a:hover {
   background: #444;
-  color: var(--clr);
-  text-shadow: 0px 0px 20px var(--clr);
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 1.55em;
-  letter-spacing: 0.1em;
-  transition: 0.5s;
-  width: var(--size);
-  height: var(--size);
-  display: flex;
-  text-align: center;
-  align-items: center;
-  align-content: center;
-}
-
-a:hover {
-  background: var(--clr);
-  box-shadow: 0 0 35px var(--clr);
 }
 
 .noTouchable {
