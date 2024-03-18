@@ -6,12 +6,13 @@
 }
 
 body {
-  min-height: 90vh;
-  min-width: 90vw;
+  min-height: 95vh;
+  min-width: 95vw;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #27282c;
+  top: 0;
 }
 
 .container {

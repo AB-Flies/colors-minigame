@@ -23,30 +23,31 @@
     <div class="grid_item"><a href="javascript:mark(3)" style="--clr:#ff6961"> <span>Red</span> </a></div>
 
     <div class="grid_item" id="last"><a href="javascript:mark(4)" style="--clr:#77dd77"> <span>Green</span> </a></div>
+
+    <div
+      style="z-index: -1; position:absolute; align-items: center; display:flex; justify-content: center; width:100vw; height:50vh; top: 0">
+      <a id="up" class="hidden noTouchable"
+        style="position: absolute; opacity: 0; --clr:#77dd77; width: 70px; height: 70px;">
+        <span>▲</span>
+      </a>
+
+      <a id="same" class="hidden noTouchable"
+        style="position: absolute; opacity: 0; --clr:grey; width: 70px; height: 70px;">
+        <span>-</span>
+      </a>
+
+      <a id="down" class="hidden noTouchable"
+        style="position: absolute; opacity: 0; --clr:#ff6961; width: 70px; height: 70px;">
+        <span>▼</span>
+      </a>
+
+      <a id="win" class="hidden noTouchable"
+        style="position: absolute; opacity: 0; --clr:#fdfd96; width: 70px; height: 70px;">
+        <span style="width: 100%;"><i class="fa-solid fa-trophy"></i></span>
+      </a>
+    </div>
   </div>
 
-  <div
-    style="z-index: -1; position:absolute; align-items: center; display:flex; justify-content: center; width:100vw; height:50vh; top: 0">
-    <a id="up" class="hidden noTouchable"
-      style="position: absolute; opacity: 0; --clr:#77dd77; width: 70px; height: 70px;">
-      <span>▲</span>
-    </a>
-
-    <a id="same" class="hidden noTouchable"
-      style="position: absolute; opacity: 0; --clr:grey; width: 70px; height: 70px;">
-      <span>-</span>
-    </a>
-
-    <a id="down" class="hidden noTouchable"
-      style="position: absolute; opacity: 0; --clr:#ff6961; width: 70px; height: 70px;">
-      <span>▼</span>
-    </a>
-
-    <a id="win" class="hidden noTouchable"
-      style="position: absolute; opacity: 0; --clr:#fdfd96; width: 70px; height: 70px;">
-      <span style="width: 100%;"><i class="fa-solid fa-trophy"></i></span>
-    </a>
-  </div>
 
   <!-- BACKGROUND -->
   <div class="bubblesContainer">
