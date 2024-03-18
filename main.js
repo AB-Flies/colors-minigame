@@ -39,7 +39,7 @@ function getRandomInt(max) {
 }
 
 function esDispositivoMovil() {
-  return window.innerWidth <= 768; // Puedes ajustar este valor según tus necesidades
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)); // Puedes ajustar este valor según tus necesidades
 }
 
 function mark(i) {
