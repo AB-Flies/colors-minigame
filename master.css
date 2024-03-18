@@ -121,6 +121,12 @@ a:hover::before {
   background: var(--clr);
 }
 
+.mobile a.marked {
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 var(--shadow) var(--clr);
+}
+
 .mobile a:hover::before {
   background: #27282c;
 }
