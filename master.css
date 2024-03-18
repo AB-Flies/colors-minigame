@@ -29,6 +29,7 @@ body {
   gap: min(10vh, 4vw);
   flex-direction: row;
   --win-hover: 140px;
+  --shadow: 90px
 }
 
 .mobile {
@@ -39,6 +40,7 @@ body {
   grid-template-rows: 1fr 1fr 1fr;
   height: 50vh;
   --win-hover: 200px;
+  --shadow: 200px;
 }
 
 #last {
@@ -89,11 +91,11 @@ a:hover {
 .marked {
   background: var(--clr);
   color: var(--clr);
-  box-shadow: 0 0 90px var(--clr);
+  box-shadow: 0 0 var(--shadow) var(--clr);
 }
 
 .marked:hover {
-  box-shadow: 0 0 90px var(--clr);
+  box-shadow: 0 0 var(--shadow) var(--clr);
 }
 
 a::before {
