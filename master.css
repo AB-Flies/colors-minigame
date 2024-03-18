@@ -80,10 +80,6 @@ a:hover {
   box-shadow: 0 0 35px var(--clr);
 }
 
-.mobile a:hover {
-  background: #444;
-}
-
 .noTouchable {
   user-select: none;
 }
@@ -114,6 +110,10 @@ a::before {
 
 a:hover::before {
   background: var(--clr);
+}
+
+.mobile a:hover::before {
+  background: #27282c;
 }
 
 .noTouchable:hover::before {
