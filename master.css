@@ -31,6 +31,7 @@ body {
 
 .mobile {
   --size: min(25vh, 25vw);
+  font-size: 2em;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
