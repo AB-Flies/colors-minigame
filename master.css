@@ -29,11 +29,9 @@ body {
   gap: min(10vh, 4vw);
   flex-direction: row;
   --win-hover: 140px;
-  --banner-font-size: 2.5em;
 }
 
 .mobile {
-  --banner-font-size: 4em;
   --size: min(25vh, 25vw);
   font-size: 1.75em;
   display: grid;

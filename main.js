@@ -6,8 +6,10 @@ const ButtonType = {
   Green: '#77dd77'
 }
 
-if (esDispositivoMovil())
+if (esDispositivoMovil()) {
   document.getElementsByClassName('container')[0].classList.add('mobile')
+  document.getElementById('banner').style.fontSize = '4em'
+}
 
 const buttons = document.getElementsByTagName('a')
 const marked = []
@@ -59,7 +61,6 @@ function mark(i) {
 
 function swap() {
   buttons[marked[0]].classList.remove('marked')
-  buttons[marked[1]].classList.remove('marked')
 
   let aux = buttons[marked[0]].style.getPropertyValue('--clr')
   buttons[marked[0]].style.setProperty('--clr', buttons[marked[1]].style.getPropertyValue('--clr'))
@@ -69,7 +70,7 @@ function swap() {
   buttons[marked[0]].querySelector('span').textContent = buttons[marked[1]].querySelector('span').textContent
   buttons[marked[1]].querySelector('span').textContent = aux
 
-  marked.splice(0, 2)
+  marked.splice(0, 1)
 
   refreshCorrect();
 }
