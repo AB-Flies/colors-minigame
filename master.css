@@ -3,7 +3,6 @@
 * {
   box-sizing: border-box;
   font-family: 'Kdam Thmor Pro', sans-serif;
-  --size: min(25vh, 15vw);
 }
 
 body {
@@ -16,6 +15,7 @@ body {
 }
 
 .container {
+  --size: min(25vh, 15vw);
   display: flex;
   position: absolute;
   overflow: hidden;
@@ -30,6 +30,7 @@ body {
 }
 
 .mobile {
+  --size: min(25vh, 25vw);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
