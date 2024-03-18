@@ -7,7 +7,7 @@ const ButtonType = {
 }
 
 if (esDispositivoMovil())
-  document.getElementsByClassName('container').classList.add('mobile')
+  document.getElementsByClassName('container')[0].classList.add('mobile')
 
 const buttons = document.getElementsByTagName('a')
 const marked = []
