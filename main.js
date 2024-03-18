@@ -124,5 +124,5 @@ function showChange(n, b) {
     element.classList.remove('show')
     banner.classList.remove('colorChange')
     action = true
-  }, 2000);
+  }, 1000);
 }

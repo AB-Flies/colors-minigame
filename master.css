@@ -186,7 +186,7 @@ a span {
 
 .show {
   animation-name: show;
-  animation-duration: 2s;
+  animation-duration: 1s;
   /* Repetir la animación infinitamente */
 }
 
@@ -202,7 +202,7 @@ a span {
   animation-fill-mode: var(--fill);
   animation-name: colorChange;
   animation-direction: var(--dir);
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-iteration-count: 2;
 }
 
