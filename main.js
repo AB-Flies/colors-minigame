@@ -76,6 +76,8 @@ function mark(i) {
 
 function swap(b = true) {
   buttons[marked[0]].classList.remove('marked')
+  if (!esDispositivoMovil())
+    buttons[marked[1]].classList.remove('marked')
 
   let aux = buttons[marked[0]].style.getPropertyValue('--clr')
   buttons[marked[0]].style.setProperty('--clr', buttons[marked[1]].style.getPropertyValue('--clr'))
@@ -86,6 +88,8 @@ function swap(b = true) {
   buttons[marked[1]].querySelector('span').textContent = aux
 
   marked.splice(0, 1)
+  if (!esDispositivoMovil())
+    marked.splice(0, 1)
 
   refreshCorrect(b);
 }
