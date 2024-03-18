@@ -46,12 +46,27 @@ function esDispositivoMovil() {
 
 function mark(i) {
   if (!buttons[i].classList.contains('marked')) {
-    if (!action && marked.length >= 1)
+    if (!action && marked.length >= 1 && !esDispositivoMovil())
       return;
+
     buttons[i].classList.add('marked')
     marked.push(i)
-    if (marked.length >= 2)
-      swap()
+    if (marked.length >= 2) {
+      if (!action && marked.length >= 1) {
+        swap(false)
+        if (counter == 5) {
+          let banner = document.getElementById('banner')
+          document.getElementById('win').classList.add('win')
+          action = false;
+          banner.style.setProperty('--clr', '#fdfd96')
+          banner.style.setProperty('--fill', 'forwards')
+          banner.style.setProperty('--dir', 'normal')
+          banner.classList.add('colorChange')
+        }
+      }
+      else
+        swap()
+    }
   }
   else {
     buttons[i].classList.remove('marked')
@@ -59,7 +74,7 @@ function mark(i) {
   }
 }
 
-function swap() {
+function swap(b = true) {
   buttons[marked[0]].classList.remove('marked')
 
   let aux = buttons[marked[0]].style.getPropertyValue('--clr')
@@ -72,7 +87,8 @@ function swap() {
 
   marked.splice(0, 1)
 
-  refreshCorrect();
+  if (b)
+    refreshCorrect();
 }
 
 function refreshCorrect(b = true) {
