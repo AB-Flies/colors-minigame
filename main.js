@@ -16,6 +16,7 @@ const marked = []
 const solution = []
 let action = true;
 let counter;
+let win = false;
 
 
 (function randomizeSolution() {
@@ -75,6 +76,9 @@ function mark(i) {
 }
 
 function swap(b = true) {
+  if (win)
+    return;
+
   buttons[marked[0]].classList.remove('marked')
   if (!esDispositivoMovil())
     buttons[marked[1]].classList.remove('marked')
@@ -119,6 +123,7 @@ function showChange(n) {
     banner.style.setProperty('--fill', 'forwards')
     banner.style.setProperty('--dir', 'normal')
     banner.classList.add('colorChange')
+    win = true
     return;
   }
 
