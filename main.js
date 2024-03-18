@@ -36,9 +36,11 @@ function getRandomInt(max) {
 
 function mark(i) {
   if (!buttons[i].classList.contains('marked')) {
+    if (!action && marked.length >= 1)
+      return;
     buttons[i].classList.add('marked')
     marked.push(i)
-    if (marked.length >= 2 && !(!action && marked.length >= 1))
+    if (marked.length >= 2)
       swap()
   }
   else {
